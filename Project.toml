@@ -1,0 +1,9 @@
+name = "Box2D"
+uuid = "f7f52fb0-4d99-4eee-89a2-b87b26020b8b"
+authors = ["Ciro Cavani <ciro.cavani@gmail.com>"]
+version = "2.4.1"
+
+[deps]
+Box2D_Julia_jll = "cff9de98-b3f9-5ed8-b56c-899cbf05a2cb"
+Box2D_jll = "6756b63d-2e54-5dc6-816b-1fc83e1ae834"
+CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
