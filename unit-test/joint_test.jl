@@ -110,9 +110,9 @@ tol = 1f-5
 # }
 F = get_reaction_force(distance_joint, inv_time_step)
 T = get_reaction_torque(distance_joint, inv_time_step)
-@assert get_x(F) == 0f0
-@assert abs(get_y(F) + mg) < tol
-@assert T == 0f0
+@test get_x(F) == 0f0
+@test abs(get_y(F) + mg) < tol
+@test T == 0f0
 
 # {
 #     b2Vec2 F = prismaticJoint->GetReactionForce(invTimeStep);
@@ -123,9 +123,9 @@ T = get_reaction_torque(distance_joint, inv_time_step)
 # }
 F = get_reaction_force(prismatic_joint, inv_time_step)
 T = get_reaction_torque(prismatic_joint, inv_time_step)
-@assert get_x(F) == 0f0
-@assert abs(get_y(F) + mg) < tol
-@assert T == 0f0
+@test get_x(F) == 0f0
+@test abs(get_y(F) + mg) < tol
+@test T == 0f0
 
 # {
 #     b2Vec2 F = revoluteJoint->GetReactionForce(invTimeStep);
@@ -136,6 +136,6 @@ T = get_reaction_torque(prismatic_joint, inv_time_step)
 # }
 F = get_reaction_force(revolute_joint, inv_time_step)
 T = get_reaction_torque(revolute_joint, inv_time_step)
-@assert get_x(F) == 0f0
-@assert abs(get_y(F) + mg) < tol
-@assert T == 0f0
+@test get_x(F) == 0f0
+@test abs(get_y(F) + mg) < tol
+@test T == 0f0

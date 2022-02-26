@@ -70,7 +70,7 @@ step!(world, time_step, velocity_iterations, position_iterations)
 
 # CHECK(world.GetContactList() == nullptr);
 # CHECK(begin_contact == false);
-@assert begin_contact[] == false
+@test begin_contact[] == false
 
 # bodyB->SetTransform(b2Vec2(1.f, 0.f), 0.f);
 transform!(body_B, Vec2(1f0, 0f0), 0f0)
@@ -80,4 +80,4 @@ step!(world, time_step, velocity_iterations, position_iterations)
 
 # CHECK(world.GetContactList() != nullptr);
 # CHECK(begin_contact == true);
-@assert begin_contact[] == true
+@test begin_contact[] == true

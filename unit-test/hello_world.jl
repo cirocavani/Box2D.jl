@@ -116,6 +116,6 @@ end
 body_position = get_position(body)
 body_angle = get_angle(body)
 
-@assert abs(get_x(body_position)) < 0.01f0
-@assert abs(get_y(body_position) - 1.01f0) < 0.01f0
-@assert abs(body_angle) < 0.01f0
+@test abs(get_x(body_position)) < 0.01f0
+@test abs(get_y(body_position) - 1.01f0) < 0.01f0
+@test abs(body_angle) < 0.01f0

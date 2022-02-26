@@ -29,10 +29,10 @@ transformation = Transform()
 # DOCTEST_REQUIRE_EQ(transform.q.c, cosf(sweep.a0));
 # DOCTEST_REQUIRE_EQ(transform.q.s, sinf(sweep.a0));
 get_transform(sweep, CxxPtr(transformation), 0f0)
-@assert(get_x(get_p(transformation)) == get_x(get_c0(sweep)))
-@assert(get_y(get_p(transformation)) == get_y(get_c0(sweep)))
-@assert(get_c(get_q(transformation)) == cos(get_a0(sweep)))
-@assert(get_s(get_q(transformation)) == sin(get_a0(sweep)))
+@test(get_x(get_p(transformation)) == get_x(get_c0(sweep)))
+@test(get_y(get_p(transformation)) == get_y(get_c0(sweep)))
+@test(get_c(get_q(transformation)) == cos(get_a0(sweep)))
+@test(get_s(get_q(transformation)) == sin(get_a0(sweep)))
 
 # sweep.GetTransform(&transform, 1.0f);
 # DOCTEST_REQUIRE_EQ(transform.p.x, sweep.c.x);
@@ -40,7 +40,7 @@ get_transform(sweep, CxxPtr(transformation), 0f0)
 # DOCTEST_REQUIRE_EQ(transform.q.c, cosf(sweep.a));
 # DOCTEST_REQUIRE_EQ(transform.q.s, sinf(sweep.a));
 get_transform(sweep, CxxPtr(transformation), 1f0)
-@assert(get_x(get_p(transformation)) == get_x(get_c(sweep)))
-@assert(get_y(get_p(transformation)) == get_y(get_c(sweep)))
-@assert(get_c(get_q(transformation)) == cos(get_a(sweep)))
-@assert(get_s(get_q(transformation)) == sin(get_a(sweep)))
+@test(get_x(get_p(transformation)) == get_x(get_c(sweep)))
+@test(get_y(get_p(transformation)) == get_y(get_c(sweep)))
+@test(get_c(get_q(transformation)) == cos(get_a(sweep)))
+@test(get_s(get_q(transformation)) == sin(get_a(sweep)))

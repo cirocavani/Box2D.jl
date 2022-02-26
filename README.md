@@ -36,15 +36,19 @@ Pkg.instantiate()
 Tests.
 
 ```sh
-julia --project test/run_tests.jl
+julia --project test/runtests.jl
 ```
 
-Examples.
+Box2D unit-tests.
 
 ```sh
-julia --project examples/hello_world.jl
-julia --project examples/world_test.jl
-julia --project examples/joint_test.jl
-julia --project examples/collision_test.jl
-julia --project examples/math_test.jl
+# at once
+julia --project unit-test/runtests.jl
+
+# single
+julia --project unit-test/hello_world.jl
+julia --project unit-test/world_test.jl
+julia --project unit-test/joint_test.jl
+julia --project unit-test/collision_test.jl
+julia --project unit-test/math_test.jl
 ```

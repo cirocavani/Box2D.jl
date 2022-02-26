@@ -30,8 +30,8 @@ rel_tol = 2f0 * eps(Float32)
 
 # CHECK(b2Abs(polygon1.m_centroid.x - center.x) < absTol + relTol * b2Abs(center.x));
 # CHECK(b2Abs(polygon1.m_centroid.y - center.y) < absTol + relTol * b2Abs(center.y));
-@assert(abs(get_x(centroid(polygon1)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
-@assert(abs(get_y(centroid(polygon1)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
+@test(abs(get_x(centroid(polygon1)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
+@test(abs(get_y(centroid(polygon1)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
 
 # b2Vec2 vertices[4];
 # vertices[0].Set(center.x - hx, center.y - hy);
@@ -52,8 +52,8 @@ vertices!(polygon2, vertices)
 
 # CHECK(b2Abs(polygon2.m_centroid.x - center.x) < absTol + relTol * b2Abs(center.x));
 # CHECK(b2Abs(polygon2.m_centroid.y - center.y) < absTol + relTol * b2Abs(center.y));
-@assert(abs(get_x(centroid(polygon2)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
-@assert(abs(get_y(centroid(polygon2)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
+@test(abs(get_x(centroid(polygon2)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
+@test(abs(get_y(centroid(polygon2)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
 
 # const float mass = 4.0f * hx * hy;
 # const float inertia = (mass / 3.0f) * (hx * hx + hy * hy) + mass * b2Dot(center, center);
@@ -69,10 +69,10 @@ compute_mass(polygon1, CxxPtr(mass_data1), 1f0)
 # CHECK(b2Abs(massData1.center.y - center.y) < absTol + relTol * b2Abs(center.y));
 # CHECK(b2Abs(massData1.mass - mass) < 20.0f * (absTol + relTol * mass));
 # CHECK(b2Abs(massData1.I - inertia) < 40.0f * (absTol + relTol * inertia));
-@assert(abs(get_x(center(mass_data1)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
-@assert(abs(get_y(center(mass_data1)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
-@assert(abs(mass(mass_data1) - mass_value) < 20f0 * (abs_tol + rel_tol * mass_value))
-@assert(abs(inertia(mass_data1) - inertia_value) < 40f0 * (abs_tol + rel_tol * inertia_value))
+@test(abs(get_x(center(mass_data1)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
+@test(abs(get_y(center(mass_data1)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
+@test(abs(mass(mass_data1) - mass_value) < 20f0 * (abs_tol + rel_tol * mass_value))
+@test(abs(inertia(mass_data1) - inertia_value) < 40f0 * (abs_tol + rel_tol * inertia_value))
 
 # b2MassData massData2;
 # polygon2.ComputeMass(&massData2, 1.0f);
@@ -83,7 +83,7 @@ compute_mass(polygon2, CxxPtr(mass_data2), 1f0)
 # CHECK(b2Abs(massData2.center.y - center.y) < absTol + relTol * b2Abs(center.y));
 # CHECK(b2Abs(massData2.mass - mass) < 20.0f * (absTol + relTol * mass));
 # CHECK(b2Abs(massData2.I - inertia) < 40.0f * (absTol + relTol * inertia));
-@assert(abs(get_x(center(mass_data2)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
-@assert(abs(get_y(center(mass_data2)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
-@assert(abs(mass(mass_data2) - mass_value) < 20f0 * (abs_tol + rel_tol * mass_value))
-@assert(abs(inertia(mass_data2) - inertia_value) < 40f0 * (abs_tol + rel_tol * inertia_value))
+@test(abs(get_x(center(mass_data2)) - get_x(center_vec)) < abs_tol + rel_tol * abs(get_x(center_vec)))
+@test(abs(get_y(center(mass_data2)) - get_y(center_vec)) < abs_tol + rel_tol * abs(get_y(center_vec)))
+@test(abs(mass(mass_data2) - mass_value) < 20f0 * (abs_tol + rel_tol * mass_value))
+@test(abs(inertia(mass_data2) - inertia_value) < 40f0 * (abs_tol + rel_tol * inertia_value))
