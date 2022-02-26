@@ -57,6 +57,7 @@ export
     plus!,
     minus!,
     scale!,
+    dot,
     length,
     length_squared,
     normalize!,
@@ -72,6 +73,8 @@ export
     compute_mass,
 # PolygonShape
     make_box!,
+    vertices!,
+    centroid,
 # FixtureDef
     shape!,
     shape,
