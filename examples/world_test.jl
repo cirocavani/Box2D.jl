@@ -1,4 +1,4 @@
-# Box2D World Test 
+# Box2D World Test
 #
 # https://github.com/erincatto/box2d/blob/v2.4.1/unit-test/world_test.cpp
 #
@@ -55,8 +55,8 @@ create_fixture(body_B, CxxPtr(circle), 0f0)
 
 # bodyA->SetTransform(b2Vec2(0.f, 0.f), 0.f);
 # bodyB->SetTransform(b2Vec2(100.f, 0.f), 0.f);
-set_transform(body_A, Vec2(0f0, 0f0), 0f0)
-set_transform(body_B, Vec2(100f0, 0f0), 0f0)
+transform!(body_A, Vec2(0f0, 0f0), 0f0)
+transform!(body_B, Vec2(100f0, 0f0), 0f0)
 
 # const float timeStep = 1.f / 60.f;
 # const int32 velocityIterations = 6;
@@ -73,7 +73,7 @@ step!(world, time_step, velocity_iterations, position_iterations)
 @assert begin_contact[] == false
 
 # bodyB->SetTransform(b2Vec2(1.f, 0.f), 0.f);
-set_transform(body_B, Vec2(1f0, 0f0), 0f0)
+transform!(body_B, Vec2(1f0, 0f0), 0f0)
 
 # world.Step(timeStep, velocityIterations, positionIterations);
 step!(world, time_step, velocity_iterations, position_iterations)

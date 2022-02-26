@@ -1,4 +1,4 @@
-# Box2D Hello World 
+# Box2D Hello World
 #
 # https://github.com/erincatto/box2d/blob/v2.4.1/unit-test/hello_world.cpp
 #
