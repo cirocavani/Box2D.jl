@@ -12,6 +12,9 @@ end
 
 export
     Vec2,
+    Rot,
+    Transform,
+    Sweep,
     MassData,
     Shape,
     PolygonShape,
@@ -63,6 +66,30 @@ export
     normalize!,
     is_valid,
     skew,
+# Rot
+    set_rotation!,
+    identity!,
+    get_angle,
+    x_axis,
+    y_axis,
+    get_s,
+    get_c,
+# Transform
+    set_transform!,
+    identity!,
+    get_p,
+    get_q,
+# Sweep
+    local_center,
+    get_c0,
+    get_c,
+    set_a0!,
+    get_a0,
+    set_a!,
+    get_a,
+    set_alpha0!,
+    get_alpha0,
+    get_transform,
 # MassData
     mass,
     center,

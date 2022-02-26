@@ -46,4 +46,5 @@ julia --project examples/hello_world.jl
 julia --project examples/world_test.jl
 julia --project examples/joint_test.jl
 julia --project examples/collision_test.jl
+julia --project examples/math_test.jl
 ```
